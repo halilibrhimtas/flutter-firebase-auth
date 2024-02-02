@@ -18,7 +18,8 @@ class HomePage extends StatelessWidget {
         child: ElevatedButton(
             onPressed: () async {
               await auth.signOut(context).then(
-                      (value) => Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => const LoginPage())));
+                      (value) => Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (BuildContext context) => const LoginPage())));
             },
             child: const Text("Sign Out")),
       ),

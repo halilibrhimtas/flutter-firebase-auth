@@ -23,6 +23,8 @@ class FirebaseAuthMethods {
         accessToken: googleAuth?.accessToken,
         idToken: googleAuth?.idToken,
       );
+
+      // Once signed in, return the UserCredential
       await _auth.signInWithCredential(credential);
     } on FirebaseAuthException catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.message!)));

@@ -17,7 +17,8 @@ class LoginPage extends StatelessWidget {
         child: ElevatedButton(
             onPressed: () async {
               await auth.signInWithGoogle(context).then(
-                      (value) => Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => const HomePage())));
+                      (value) => Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (BuildContext context) => const HomePage())));
             },
             child: Text("Google Sign In")),
       ),
